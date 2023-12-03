@@ -1,10 +1,16 @@
-
+import pandas as pd
 def count_batteries_by_health(present_capacities):
-  return {
-    "healthy": 0,
-    "exchange": 0,
-    "failed": 0
-  }
+  if present_capacities>=80:
+    return 'healthy'
+  elif 62<=present_capacities<80:
+    return 'Exchange'
+  else:
+    return 'Failed'
+  
+  
+  
+
+  
 
 
 def test_bucketing_by_health():
