@@ -2,9 +2,9 @@ import pandas as pd
 def count_batteries_by_health(present_capacities):
   for i in present_capacities:
     soh=100*i/120
-    if soh>=80:
+    if soh>80:
     return 'healthy'
-  elif 62<=soh<80:
+  elif 62<=soh<=80:
     return 'exchange'
   else:
     return 'failed'
