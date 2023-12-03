@@ -1,10 +1,18 @@
-
+import pandas as pd
 def count_batteries_by_health(present_capacities):
-  return {
-    "healthy": 0,
-    "exchange": 0,
-    "failed": 0
-  }
+  for i in present_capacities:
+    soh=100*i/120
+    if soh>80:
+    return 'healthy'
+  elif 62<=soh<=80:
+    return 'exchange'
+  else:
+    return 'failed'
+  
+  
+  
+
+  
 
 
 def test_bucketing_by_health():
