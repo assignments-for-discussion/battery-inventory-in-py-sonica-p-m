@@ -5,9 +5,9 @@ def count_batteries_by_health(present_capacities):
     if soh>=80:
     return 'healthy'
   elif 62<=soh<80:
-    return 'Exchange'
+    return 'exchange'
   else:
-    return 'Failed'
+    return 'failed'
   
   
   
